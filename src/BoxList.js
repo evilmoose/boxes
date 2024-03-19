@@ -1,5 +1,6 @@
 import React, {useState} from "react";
 import Box from "./Box";
+import NewBoxForm from "./NewBoxForm";
 
 const BoxList = () => {
     const [boxes, setBoxes] = useState([]);
@@ -25,7 +26,8 @@ const BoxList = () => {
 
     return (
         <div>
-
+            <NewBoxForm createBox={addBox} />
+            {boxComponent}
         </div>
     );
 }
